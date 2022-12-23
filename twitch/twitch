@@ -1,5 +1,5 @@
 #!/bin/bash
-choices=$(/usr/bin/twitch-script/check_live.py < /usr/bin/twitch-script/streamers.txt) 
+choices=$(/home/thomas/scripts/twitch/check_live.py < /home/thomas/scripts/twitch/streamers.txt) 
 choice=$(echo -e "$choices" | dmenu -c -i) 
 streamlink -p mpv "twitch.tv/$choice" best
 
